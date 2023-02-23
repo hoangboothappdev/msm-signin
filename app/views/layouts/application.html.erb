@@ -34,7 +34,7 @@
       <ul>
 
 
-      <% if session %>
+      <% if session.fetch(:user_id) == nil %>
           
           <li>
             <a href="/user_sign_in">

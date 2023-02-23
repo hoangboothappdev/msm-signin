@@ -1,4 +1,6 @@
 class ActorsController < ApplicationController
+
+
   def index
     matching_actors = Actor.all
 

@@ -1,4 +1,7 @@
 class CharactersController < ApplicationController
+
+
+
   def index
     matching_characters = Character.all
 

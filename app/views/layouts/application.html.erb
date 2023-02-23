@@ -14,7 +14,62 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
+
+
   <body>
+
+<% if alert.present? %>
+  <div style="border: thin red solid; color: red;" >
+    <%= alert %>
+  </div>
+<% end %>
+
+<% if notice.present? %>
+  <div style="border: thin green solid; color: green;">
+    <%= notice %>
+  </div>
+<% end %>
+
+    <nav>
+      <ul>
+
+
+      <% if session %>
+          
+          <li>
+            <a href="/user_sign_in">
+              Sign in
+            </a>
+          </li>
+          <li>
+            <a href="/user_sign_up">
+              Sign up
+            </a>
+          </li>
+
+      <% else %>
+          <li>
+            <a href="/user_sign_out">
+              Sign out
+            </a>
+          </li>
+          <li>
+            <a href="/bookmarks">
+              My bookmarks
+            </a>
+          </li>
+      <% end %>
+
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+
     <%= yield %>
   </body>
 </html>

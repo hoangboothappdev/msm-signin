@@ -22,6 +22,6 @@ class Bookmark < ApplicationRecord
     :required => true
   })
 
-  
+
 
 end
